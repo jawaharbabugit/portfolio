@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawahar's portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <style>
+      html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} 
+         .jumbotron {
+            background-image: url('jumbotron.jpg') !important;
+             background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            height: 900px;
+            position: relative;
+        }
+        #animation{
+            position: absolute;
+            margin-left: 20em;
+            color: white;
+            margin-top: 400px;
+            width: 100%;
+        }
+        .progress{
+            margin-top: 5em;
+            margin-bottom: 5em;
+
+        }
+        #areas i{
+          font-size: 5em;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+              }
+        #areas h4{
+            margin-top: 1em;
+            margin-bottom: 2.5em;
+            text-align: center;
+        }
+        .icon{
+          text-align: center;
+        }
+        * {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+    top: 50%;  
+    left: 50%; 
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hidden {
+  display: none;
+}
+.icon{
+  font-size: 2.5em;
+  margin-right: 0.5em;  
+}
+    </style>
+</head>
+<body onload="load()">
+  <div class="loader"></div>
+  <section  class="body hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: sticky;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#works">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#enquiry">Enquire me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid jumbotron">
+        <section id="animation">
+            <div class="animation-container">
+              <h1>
+                I am  <span id="animate"></span>
+              </h1>
+              <h2></h2>
+            </div>
+          </section>
+    </div>
+      <section class="row" id="about" style="margin-bottom: 10vw; position: relative; margin-top:7%;">
+        <div class="col-md-4 col-xs-1">
+          <img src='jawahar.jpg'
+            style="height: 100%; width: 80%; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="col-md-8 col-xs-1">
+
+          <blockquote>
+            <h2 style="text-align: center;">About me</h2><br><br><br>
+            <h3>I am Jawahar Babu. I am an engineering student specialized in ECE. I am an aspiring entreprenuer and a software developer expertized in field of web development 
+                and machine learning.  </h3><br>
+           <h3> I love to solve problems and building new stuff. My aim is to solve real world problems and make the world a better place with my skills and experience.
+        </h3>
+          </blockquote></div>
+
+      </section>
+    <section class="row" id="skills" style="margin-bottom: 10vw; position: relative; margin-top:7%; box-sizing: border-box; margin-left: 4rem;">
+    <div class="col-md-6 col-xs-1">
+        <h2 style="text-align: center; margin-bottom: 2.5em;">Skills</h2>
+        <div class="h3">Python</div>
+        <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+          <div class="h3">JavaScript</div>
+          <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+            </div>
+            <div class="h3">HTML & CSS</div>
+            <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+              </div>
+              <div class="h3">Django</div>
+        <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+          <div class="h3">SQL</div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+        </div></div>
+          <div class="col-md-6 col-xs-1" id="areas">
+            <h2 style="text-align: center; margin-bottom: 2.5em;">Areas of Expertise</h2>
+            <i class="fas fa-file-code icon"></i><h4>Web Development</h4>
+            <i class="fas fa-database icon"></i><h4>Data Science</h4>
+            <i class="fas fa-brain icon"></i><h4>Machine learning</h4>
+            <i class="fas fa-wifi icon"></i><h4>Internet of Things</h4>            
+          </div>
+        
+    </section>
+    <section class="row container-fluid" id="works" style="margin-bottom: 10vw; position: relative; margin-top:7%; box-sizing: border-box; margin-left: 4rem;">
+      <h2 style="text-align: center; margin-bottom: 2.5em;">My Works</h2>
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, '1')">Automatic Fire Fighting Robot</button>
+        <button class="tablinks" onclick="openCity(event, '2')">Self Driving car using Traffic sign classifier</button>
+        <button class="tablinks" onclick="openCity(event, '3')">Vegfinger</button>
+        <button class="tablinks" onclick="openCity(event, '4')">Deep Learning applications</button>
+        <button class="tablinks" onclick="openCity(event, '5')">DataScience for Stock Market Analysis</button>
+        <button class="tablinks" onclick="openCity(event, '6')">IoT Dashboard</button>
+      </div>
+      
+      <div id="1" class="tabcontent">
+        <img src="DSC_0038.jpg" style="width: 300px; height: 300px; float: right; margin: 4em 3em 4em 1em">
+        <span style="clear: both;">
+        <h3 style="margin-bottom: 2.5em;">Automatic Fire Fighting Robot</h3>
+        <p>Automatic Fire Fighting robot automatically detects and extinguishes fire with the help of fire sensors and circuit logic design using integrated circuits.</p>
+        <p> Our project won the 1st Prize at National Science Day -2018 conducted by GCE, Salem.</p>
+        <p>We improvised this project and developed a concept fpr high resistance fire fighting robot which will be suitable for industrial fires</p>
+        <p> Our Concept was selected as the Best Hardware Project, at Internal Hackathon -2020 conducted by GCT.</p>
+      </span></div>
+      
+      <div id="2" class="tabcontent">
+        <img src="trafficsign.jpg" style="width: 300px; height: 300px; float: right; margin: 4em 3em 4em 1em">
+        <span style="clear: both;">
+        <h3 style="margin-bottom: 2.5em;">Self Driving car using Traffic sign classifier</h3>
+        <p>Our traffic sign classifier uses Image processing and deep learning for classfying traffic signs. Commands are sent to the car using IoT devices and Mqtt protocol which then acts accordingly to traffic sign.
+          This is the classic example of vechicle to infrastructure design.
+        </p>
+        <p> Our project won the 3rd Prize at Compcom-2020 conducted by the Department of Electronics Engineering, GCE Salem</p>
+      </span>
+      </div>
+      
+      <div id="3" class="tabcontent">
+        <img src="vegfinger.jpg" style="width: 300px; height: 300px; float: right; margin: 4em 3em 4em 1em">
+        <span style="clear: both;">
+        <h3 style="margin-bottom: 2.5em;">Vegfinger</h3>
+        <p>Vegfinger is first client in my freelance webdevelopment career. Vegfinger is a vegetable ecommerce startup. For this project, we used HTML, CSS, Jquery for front end and django for backend.
+        Ecommerce website is still in development phase. you can see my work by visting www.vegfinger.com.
+        </p>        
+      </span></div>
+      <div id="4" class="tabcontent">
+        <iframe width="300" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY" style="float: right; margin: 4em 3em 4em 1em"></iframe>
+        <span style="clear: both;">
+        <h3 style="margin-bottom: 2.5em;">Deep Learning applications</h3>
+        <p>This project combines all the most commonly used deep learning applications in a single website. The services includes Sppech synthesis, speech recognition, PDF scanner, sentiment Analysis
+          , category classifer and much more.
+        </p>        
+      </span></div>
+
+      <div id="5" class="tabcontent">
+        <img src="apple.png" style="width: 300px; height: 300px; float: right; margin: 4em 3em 4em 1em">
+        <span style="clear: both;">
+        <h3 style="margin-bottom: 2.5em; margin-top: 1.5em;">DataScience for Stock Market Analysis</h3>
+        <p> We developed multiple machine learning algorithms to analyse, predict, visualize and notify anamolies and opportunities in stock market using statistical algorithms like bollinger bands,
+          trade calls, CAPM analysis, MPT, etc. This Project is created as part of datascience internship. we used pandas, numpy and scikit-learn libraries in python for datascience and machine learning operations.
+        </p>        
+      </span></div>
+
+      <div id="6" class="tabcontent">
+        <img src="iot.jpeg" style="width: 300px; height: 300px; float: right; margin: 4em 3em 4em 1em">
+        <span style="clear: both;">
+        <h3 style="margin-bottom: 2.5em; margin-top: 1.5em;">IoT Dashboard</h3>
+        <p>IoT dashboard is used to fetch as well as post digital and analog data to control as well as monitor the devices connected to internet. Here, we use REST framework for accessing as well as posting
+          data from and to sqlite database hosted in AWS cloud server. Frontend shows the status of lights and other components and also displays value streamed by sensors to the server. 
+        </p>        
+      </span></div>
+      </section>
+  <!-- Site footer -->
+  <footer class="site-footer" id="enquiry">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Enquire Me</h6>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsHqPG8Ht7A1DqM5SQxqR8qwVWDJy3yT85ZELm6P5_P73Tdg/viewform?embedded=true" width="640" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li class="nav-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#works">Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#enquiry">Enquire me</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Contact me</h6>
+          <ul class="footer-links">
+            <li><a href="tel:918825860397"><i class="fas fa-phone-square-alt icon"></i>+918825860397</a></li>
+            <li><a href="mailto:jawaharbabu199914@gmail.com" target="_blank"><i class="fas fa-envelope icon"></i>jawaharbabu199914@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt icon"></i>Coimbatore</li>            
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="linkedin" href="https://www.linkedin.com/in/jawahar-babu-s-05b332175/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/jawahar.babu.393" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="whatsapp" href="https://wa.me/918825860397/?text=Hi Jawahar" target="_blank"><i class="fab fa-whatsapp"></i></a></li>   
+            <li><a href="mailto:jawaharbabu199914@gmail.com" target="_blank"  style="text-decoration: none !important"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+</section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typed = new Typed('#animate', {
+          strings: ["Jawahar Babu", "a Web developer"],
+          typeSpeed: 75,
+          backSpeed: 75,
+          loop: true
+        });
+        function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+function load(){
+ 
+  $('.loader').fadeOut("slow");
+  $(".body").removeClass("hidden");
+  
+
+  openCity(event, '1');
+}
+
+      </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
